@@ -129,10 +129,12 @@ def PasteText():
                     mytable.setItem(i, 0, newItem)
                     mytable.item(i, 0).setTextAlignment(Qt.AlignHCenter |
                                                         Qt.AlignVCenter)
+                    mytable.item(i, 0).setForeground(QtGui.QBrush(QtGui.QColor(0,0,0)))
                     newItem = QTableWidgetItem(str(pastelist[i][1]))
                     mytable.setItem(i, 1, newItem)
                     mytable.item(i, 1).setTextAlignment(Qt.AlignHCenter |
                                                         Qt.AlignVCenter)
+                    mytable.item(i, 1).setForeground(QtGui.QBrush(QtGui.QColor(0,0,0)))
                     counts = counts + 1
                     ui.statusbar.showMessage(str(counts) + ' Datas Pasted!')
                 else:
@@ -211,10 +213,14 @@ def Calibrate():
             mytable.setItem(i, 2, newItem)
             mytable.item(i, 2).setTextAlignment(Qt.AlignHCenter
                                                 | Qt.AlignVCenter)
+            mytable.item(i, 2).setForeground(QtGui.QBrush(QtGui.QColor(0,0,0)))
+
             newItem = QTableWidgetItem(str(caled[1]))
             mytable.setItem(i, 3, newItem)
             mytable.item(i, 3).setTextAlignment(Qt.AlignHCenter
                                                 | Qt.AlignVCenter)
+            mytable.item(i, 3).setForeground(QtGui.QBrush(QtGui.QColor(0,0,0)))
+
             ui.statusbar.showMessage('Working...')
         fdata.close()
         if len(cnt) >= 1:
@@ -297,8 +303,8 @@ def export_ste():
                 print(str(tmptext[i][0]) + '   ' + str(tmptext[i][1]) + 
                       '      P      {Cross	12	0	0	-1', file=sterfile)
                 i = i + 1
-        sterfile.close()
-        rosefile.close()
+            sterfile.close()
+            rosefile.close()
 
 def showabout():
     dialog = QtWidgets.QDialog()

@@ -17,9 +17,6 @@ def isnumber(num):
 
 
 class Figca(FigCanvas):
-    # 通过继承FigureCanvas类，使得该类既是
-    # 一个PyQt5的Qwidget，又是一个matplotli
-    # b的FigureCanvas，这是连接pyqt5与matplotlib的关键
 
     def __init__(self, parent=None):
         figure = Figure(figsize=(6.9, 6.9), dpi=72)
@@ -45,7 +42,7 @@ class Figca(FigCanvas):
                 if line != '\n':
                     mylist0.append(line.split())  # read the
 # contents to a numberic list, "extend" is perfect
-            print(mylist0)
+#            print(mylist0)
             total0 = len(mylist0)
             mylist=[]
             for i in range(total0):
