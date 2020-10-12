@@ -144,7 +144,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Text, brush)
         self.spinBox.setPalette(palette)
-        self.spinBox.setMinimum(2)
+        self.spinBox.setMinimum(4)
         self.spinBox.setMaximum(360)
         self.spinBox.setProperty("value", 10)
         self.spinBox.setObjectName("spinBox")

@@ -56,7 +56,7 @@ class Figca(FigCanvas):
             for k, g in groupby(sorted(mylist), key=lambda x: x // (interd*1.0)):
                 templist = list(g)  # Here is something strange, list(g) can only be used
 # one time, when the second list(g) will return null
-                petal.append(round(sum(templist)/len(templist), 1))
+                petal.append(round((k+0.5)*interd, 1))
                 petal_n.append(len(templist))
                 grpnum = grpnum + 1
 # Recalculate the number
