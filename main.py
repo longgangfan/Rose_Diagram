@@ -28,6 +28,7 @@ clearfile()
 global colu_cnt
 colu_cnt = 9999
 app = QApplication(sys.argv)
+app.setStyle('Fusion')
 app.setWindowIcon(QtGui.QIcon('icon.png'))
 window = QMainWindow()
 ui = win()
