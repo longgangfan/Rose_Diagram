@@ -189,7 +189,7 @@ def Calibrate():
                 invalid.append(i)
         else:
             empty.append(i)
-    if (tmp[0] == '' or tmp[1] == '' or cnt == 0):
+    if (tmp[0] == '' or tmp[1] == '' or cnt == 0 or checkdata(tmp[0], tmp[1])==False):
         ui.statusbar.showMessage('Please input the strata attitudes '
                                  'and measurements!')
     else:

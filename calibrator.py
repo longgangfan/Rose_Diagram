@@ -4,15 +4,15 @@ import math
 PI = math.pi
 
 
-def a2d(deg):
+def d2a(deg):
     return deg*1.0/180*PI
 
 
 def rotate(a, b, w, r, v):
-    a = a2d(a)
-    b = a2d(b)
-    w = a2d(w)
-    r = a2d(r)
+    a = d2a(a)
+    b = d2a(b)
+    w = d2a(w)
+    r = d2a(r)
     x0 = np.sin(b) * np.sin(a)
     y0 = np.sin(b) * np.cos(a)
     z0 = np.cos(b)
